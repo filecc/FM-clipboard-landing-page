@@ -54,10 +54,6 @@ Sure, it can be better.
 
 As always the best help is this:
 
-
-```css
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
 .social a:hover{
     filter: invert(60%) sepia(74%) saturate(437%) hue-rotate(121deg) brightness(88%) contrast(85%);
