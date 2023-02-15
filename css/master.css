@@ -22,9 +22,17 @@
     margin: 0 auto;
     text-align: center;
 }
+.container-md{
+    max-width: calc(var(--desktopW) - 200px);
+    margin: 0 auto;
+}
 
 a{
     text-decoration: none;
+}
+
+.d-flex{
+    display: flex;
 }
 
 
@@ -46,7 +54,7 @@ a{
 }
 h1, h2{
     color: var(--neutral-dark);
-    max-width: 70%;
+    max-width: 55%;
     margin: 1rem auto 2rem auto;
 }
 p{
@@ -54,7 +62,6 @@ p{
 }
 /* header */
 header {
-    min-height: 60vh;
     background-image: url('../images/bg-header-desktop.png');
     background-repeat: no-repeat;
     background-size: contain;
@@ -82,8 +89,8 @@ header img{
 h1{
     font-size: 2.3em;
 }
-header p, section p:first-of-type{
-    max-width: 70%;
+header p, section h2+p{
+    max-width: 55%;
     margin: .5rem auto 3rem auto;
 }
 
@@ -94,32 +101,69 @@ header p, section p:first-of-type{
 }
 
 /* main */
+#firstSection{
+    margin-top: 8rem;
+}
 section{
-    
+    margin-top: 4rem;
+    margin-bottom: 3rem;
 }
 h2{
     font-size: 2rem;
 }
+.imgANDtxt{
+    margin-top: 6rem;
+}
+.sectionImgContainer{
+    width: 60%;
+
+}
+section img{
+    object-fit: contain;
+    width: 100%;
+}
+
+.sectionTextcontainer{
+    text-align: left;
+    width: 40%;
+    padding-left: 4rem;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem
+}
+h3{
+    font-size: 1.5rem;
+    color: var(--neutral-dark);
+}
+
+h3+p{
+    color: var(--neutral-light);
+    padding-right: 1.5rem;
+    margin-bottom: 3rem;
+}
+
 
 
 @media screen and (max-width: 500px) {
     header {
-        min-height: 50vh;
+        min-height: 70vh;
         background-image: url('../images/bg-header-mobile.png');
     }
     header img{
         margin-top: 5rem;
     }
-    h1{
-        font-size: 2rem;
+    h1, h2{
+        color: var(--neutral-dark);
         max-width: 100%;
-        padding: 0 2rem;
-        margin: .5rem auto 1rem auto;
+        margin: 1rem auto .5rem auto;
+        padding: 0 1.5rem;
     }
-    header p{
+    header p, section h2+p{
         max-width: 100%;
-        padding: 0 2rem;
-        margin: 1rem auto 1.5rem auto;
+        padding: 1.5rem;
+        margin: 0 auto 2rem auto;
     }
     .buttonContainer{
         display: flex;
@@ -127,6 +171,41 @@ h2{
         justify-content: center;
         gap: 1rem;
         padding: 1rem 2.5rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    .imgANDtxt{
+        margin-top: 6rem;
+        flex-direction: column;
+    }
+    .sectionImgContainer{
+        width: 100%;
+    }
+    section img{
+        object-fit: contain;
+        width: 100%;
+        padding: 1.5rem;
+    }
+    
+    .sectionTextcontainer{
+        text-align: center;
+        width: 100%;
+        padding-left: 0;
+        display: block;
+        padding: 1.5rem;
+    }
+
+    h3{
+        font-size: 1.4rem;
+        color: var(--neutral-dark);
+        margin-bottom: 1.3rem;
+    }
+    
+    h3+p{
+        color: var(--neutral-light);
+        padding-right: 0;
+        margin-bottom: 3rem;
     }
     
 }
