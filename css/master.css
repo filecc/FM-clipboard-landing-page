@@ -10,7 +10,7 @@
     --desktopW: 1200px;
     --mobileW: 375px;
     /* colors */
-    --primary-c: rgb(38, 186, 164);
+    --primary-c: #26baa4;
     --primary-b: #6173ff;
     --neutral-dark: #4c545d;
     --neutral-light: #9fabb2;
@@ -44,6 +44,10 @@ ul{
     padding: 15px 30px;
     background-color: black;
     border-radius: 30px;
+    transition: all linear .2s;
+}
+.btn:hover{
+    filter: saturate(.4) brightness(1.4);
 }
 .btn-primary{
     background-color: var(--primary-c);
@@ -110,7 +114,7 @@ header p, section h2+p{
 }
 section{
     margin-top: 4rem;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 h2{
     font-size: 2rem;
@@ -192,8 +196,16 @@ ul li{
     color: var(--neutral-dark);
 }
 
+ul li:hover{
+    color: var(--primary-c);
+    cursor: pointer;
+}
+
 .social{
     gap: 1rem;
+}
+.social a:hover{
+    filter: invert(60%) sepia(74%) saturate(437%) hue-rotate(121deg) brightness(88%) contrast(85%);
 }
 
 .logoFooter {
